@@ -1,5 +1,5 @@
 const initState = {
-   filter: {
+   filters: {
       search: '', // giá trị input để filter
       status: 'All', // trạng thái hiện tại của todo gồm All - Completed -To do
       priority: [], //  độ ưu tiên
@@ -29,7 +29,7 @@ const rootReducer = (state = initState, action) => {
       case 'filters/searchFilterChange': {
          return {
             ...state,
-            filter: { ...state.filter, search: action.payload },
+            filters: { ...state.filters, search: action.payload },
          };
       }
       default:
